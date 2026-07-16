@@ -37,10 +37,12 @@ jobs:
 
     # Step 4: Run the build script if it is defined in package.json
     - name: Build project
+      working-directory: ./nodeapp
       run: npm run build --if-present
 
     # Step 5: Execute the unit test suite
     - name: Run tests
+      working-directory: ./nodeapp
       run: npm test
 
   # Job 2: Build the Docker image and push it to Docker Hub
