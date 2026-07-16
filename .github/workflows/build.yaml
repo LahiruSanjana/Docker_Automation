@@ -28,9 +28,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm' # Caches npm dependencies for faster subsequent runs
+        cache-dependency-path: './nodeapp/package-lock.json'
 
     # Step 3: Install a clean slate of dependencies based on package-lock.json
     - name: Install dependencies
+      working-directory: ./nodeapp
       run: npm ci
 
     # Step 4: Run the build script if it is defined in package.json
