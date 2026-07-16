@@ -78,5 +78,5 @@ jobs:
         context: ./
         push: true
         tags: |
-          lahirusanjana/docker_automation:${{ env.SHORT_SHA }}
-          lahirusanjana/docker_automation:latest
+          lahirusanjana/docker-automation:${{ env.SHORT_SHA }}
+          lahirusanjana/docker-automation:latest
